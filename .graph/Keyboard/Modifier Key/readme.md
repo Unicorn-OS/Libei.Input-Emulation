@@ -1,4 +1,5 @@
 # Modifier Key
+## wl_keyboard.enter
 https://gitlab.freedesktop.org/libinput/libei#differences-between-xtest-vs-libei
 
 Quote:
@@ -6,4 +7,4 @@ Quote:
 >
 >Modifiers in xdotool are handled by obtaining the modifier mask from the X server, identifying any difference to the intended mask and emulating key events to change the modifier state to the intended one. For example, if capslock is on, xdotool would send a capslock key event first (thus disabling capslock) and then the actual key sequence. This is followed by another capslock key event to restore the modifier mask.
 >
->This is not possible for a pure libei client as the modifier state is maintained by the windowing system (if any). A client can obtain the modifier state on Wayland on wl_keyboard.enter but when the client is in-focus, there is rarely a need to emulate events.
+>This is not possible for a pure libei client as the modifier state is maintained by the windowing system (if any). A client can obtain the modifier state on Wayland on `wl_keyboard.enter` but when the client is in-focus, there is rarely a need to emulate events.
