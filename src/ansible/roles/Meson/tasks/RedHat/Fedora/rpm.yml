@@ -1,0 +1,14 @@
+---
+- name: Install Meson
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - meson
+    state: latest
+
+- name: Install Compiler
+  become: true
+  ansible.builtin.dnf:
+    name:
+      - gcc-c++
+    state: latest

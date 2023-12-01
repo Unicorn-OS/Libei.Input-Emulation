@@ -1,0 +1,11 @@
+- name: Power.Screen Lock
+  community.general.dconf:
+    key: "/org/gnome/desktop/screensaver/lock-enabled"
+    value: "false"
+    state: present
+
+- name: Power.Idle delay
+  community.general.dconf:
+    key: "/org/gnome/desktop/session/idle-delay"
+    value: "uint32 0"
+    state: present

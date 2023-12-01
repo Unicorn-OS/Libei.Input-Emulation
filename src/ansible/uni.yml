@@ -1,0 +1,7 @@
+- hosts: test #localhost
+  vars:
+    ansible_become_password: u
+
+  roles:
+  # - Meson
+  - Power/always on

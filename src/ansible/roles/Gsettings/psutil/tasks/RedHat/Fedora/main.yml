@@ -1,0 +1,7 @@
+---
+- name: Install python3-psutil
+  ansible.builtin.dnf:
+    name:
+    - python3-psutil
+    state: latest
+  become: true

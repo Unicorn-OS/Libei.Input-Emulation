@@ -1,0 +1,14 @@
+---
+# Fedora Beta
+- name: using Fedora Beta
+  include_role:
+    name: "{{role_path}}/Fedora Beta"
+  when: ansible_distribution == "Fedora" and (ansible_distribution_major_version | int == Fedora_Beta)
+
+# Fedora stable
+- include_tasks: '{{ ansible_os_family }}/{{ ansible_distribution }}/main'
+  when: ansible_distribution == "Fedora" and not (ansible_distribution_major_version | int == Fedora_Beta)
+
+# Everything else
+- include_tasks: '{{ ansible_os_family }}/{{ ansible_distribution }}/main'
+  when: not ansible_distribution == "Fedora"

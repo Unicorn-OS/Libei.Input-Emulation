@@ -1,0 +1,25 @@
+- name: test Silverblue 0
+  command: which rpm-ostree
+  register: rpm_ostree_exists
+  changed_when: false
+  failed_when: false
+
+- name: test Silverblue 1
+  command: which dnf
+  register: dnf_exists
+  changed_when: false
+  failed_when: false
+
+- name: Is Silverblue?
+  ansible.builtin.set_fact:
+    Silverblue: "{{ true if (rpm_ostree_exists.rc == 0 and dnf_exists.rc == 1) else false }}"
+  changed_when: false
+
+- name: Silverblue specific tasks
+  ansible.builtin.include_tasks: Silverblue.yml
+  when: Silverblue
+
+- name: regular Distro
+  include_tasks:
+    file: "rpm.yml"
+  when: not Silverblue

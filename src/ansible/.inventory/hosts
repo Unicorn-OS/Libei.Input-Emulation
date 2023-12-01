@@ -1,0 +1,7 @@
+[test]
+192.168.122.131
+
+[test:vars]
+ansible_user=me
+ansible_become_password=u
+

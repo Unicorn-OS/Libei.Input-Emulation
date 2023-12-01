@@ -1,0 +1,33 @@
+# from: https://github.com/p1u3o/tidbits#android-tools-adb-fastboot-etc
+
+- name: in Toolbox
+  ansible.builtin.include_tasks: ../in Toolbox/main.yml
+  when: in_Toolbox
+
+- when: not in_toolbox
+  block:
+  - name: Create a directory
+    ansible.builtin.file:
+      path: "{{ dir }}"
+      state: directory
+      owner: "{{ ansible_env.USER }}"
+      group: "{{ ansible_env.USER }}"
+    become: true
+
+  - name: Download ADB
+    ansible.builtin.get_url:
+      url: "{{ url }}"
+      dest: "{{ dir }}/{{ filename }}.zip"
+
+  - name: Unarchive a file that is already on the remote machine
+    ansible.builtin.unarchive:
+      src: "{{ dir }}/{{ filename }}.zip"
+      dest: "{{ dir }}/"
+      remote_src: yes
+
+  - name: copy to /usr/local/bin
+    ansible.builtin.shell: cp -v platform-tools/adb platform-tools/fastboot platform-tools/mke2fs* /usr/local/bin/  # missing: platform-tools/e2fsdroid
+    args:
+      chdir: "{{ dir }}"
+      creates: /usr/local/bin/adb
+    become: true

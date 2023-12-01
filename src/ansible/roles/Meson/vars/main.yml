@@ -1,0 +1,11 @@
+filename: platform-tools-latest-linux
+
+url: "https://dl.google.com/android/repository/{{ filename }}.zip"
+
+dir: /opt/android-dev
+
+Fedora_Beta: 39
+
+ubuntu_latest_supported_codename: "jammy"
+
+ubuntu_latest_supported_ver: 22.04
