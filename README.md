@@ -1,6 +1,14 @@
 # Libei.Input-Emulation
 # Home
 ## [Doc:](https://gitlab.freedesktop.org/libinput/libei#documentation)
+
+Client:  
+https://libinput.pages.freedesktop.org/libei/api/group__libei.html
+
+Server:  
+https://libinput.pages.freedesktop.org/libei/api/group__libeis.html
+
+Protocol:  
 https://libinput.pages.freedesktop.org/libei/
 - https://libinput.pages.freedesktop.org/libei/libraries/
 
