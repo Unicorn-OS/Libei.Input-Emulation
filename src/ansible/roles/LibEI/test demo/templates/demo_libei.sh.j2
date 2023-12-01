@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+cd {{ build_dir }}/tools
+
+
+start_server(){
+  screen -S server -d -m ./eis-demo-server
+}
+
+start_client(){
+  screen -S client -d -m ./ei-demo-client
+}

@@ -1,0 +1,6 @@
+- name: GNU Screen
+  ansible.builtin.dnf:
+    name:
+    - screen
+    state: latest
+  become: true

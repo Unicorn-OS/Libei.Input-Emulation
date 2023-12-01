@@ -1,4 +1,3 @@
 dependencies:
-  - LibEI/build deps
-  # - LibEI/build
-  - LibEI/test
+  - LibEI/build
+  - LibEI/test demo  # Demonstration

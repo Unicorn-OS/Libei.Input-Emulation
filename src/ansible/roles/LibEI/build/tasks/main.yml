@@ -1,5 +1,17 @@
 - name: Git clone
   ansible.builtin.git:
     repo: "{{ git_url }}"
-    dest: "{{ ansible_env.HOME }}/.uni/ai/libei"
+    dest: "{{ src_dir }}"
     update: no
+
+- name: Meson setup build
+  ansible.builtin.shell: meson setup build
+  args:
+    chdir: "{{ src_dir }}/"
+    creates: "{{ build_dir }}/"
+
+- name: Meson compile
+  ansible.builtin.shell: meson compile
+  args:
+    chdir: "{{ build_dir }}/"
+    creates: "{{ build_dir }}/.ninja_log"

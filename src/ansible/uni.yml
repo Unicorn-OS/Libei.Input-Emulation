@@ -1,8 +1,9 @@
 - hosts: test #localhost
   vars:
     ansible_become_password: u
+    src_dir: "{{ lookup('ansible.builtin.env', 'HOME') }}/libei"
 
   roles:
-  - Env
-  - Meson
+  # - Env
+  # - Meson
   - LibEI
