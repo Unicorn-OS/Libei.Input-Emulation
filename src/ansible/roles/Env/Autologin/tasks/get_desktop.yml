@@ -1,10 +1,14 @@
-# from: https://askubuntu.com/questions/956664/how-do-i-determine-which-is-the-current-users-de-through-cli-within-ssh-or-cron
+# script: get_desktop.sh
+# modified from: https://github.com/pa4080/cron-gui-launcher/blob/master/scripts/cron-gui-launcher.sh
+# discuss: https://askubuntu.com/questions/956664/how-do-i-determine-which-is-the-current-users-de-through-cli-within-ssh-or-cron
 
 - name: Get XDG_CURRENT_DESKTOP
   ansible.builtin.script: get_desktop.sh
   register: XDG_CURRENT_DESKTOP
-  failed_when: false
-  no_log: true
+  changed_when: false
+
+- include_tasks: "{{ XDG_CURRENT_DESKTOP.stdout | capitalize }}/{{ ansible_distribution }}.yml"
 
 - debug:
-    msg: "{{ XDG_CURRENT_DESKTOP.stdout }} {{ gnome_xdg }}"
+    msg: "{{ XDG_CURRENT_DESKTOP.stdout | capitalize }}/{{ ansible_distribution }}.yml"
+  when: debug

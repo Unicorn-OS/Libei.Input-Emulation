@@ -1,0 +1,13 @@
+- name: Enable Automatic Login
+  ansible.builtin.lineinfile:
+    path: /etc/gdm3/custom.conf
+    regexp: '^#  AutomaticLoginEnable'
+    line: AutomaticLoginEnable = true
+  become: true
+
+- name: Automatic Login user
+  ansible.builtin.lineinfile:
+    path: /etc/gdm3/custom.conf
+    regexp: '^#  AutomaticLogin'
+    line: "AutomaticLogin = {{ansible_env.USER}}"
+  become: true

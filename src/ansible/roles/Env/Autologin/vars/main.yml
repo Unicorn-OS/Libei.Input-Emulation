@@ -1,3 +1,2 @@
 ---
-ubuntu_gnome_xdg: "ubuntu:GNOME"
-gnome_xdg: "GNOME"
+gnome_xdg: "gnome"
