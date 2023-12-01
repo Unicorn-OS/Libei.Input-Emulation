@@ -1,0 +1,10 @@
+# from: https://askubuntu.com/questions/956664/how-do-i-determine-which-is-the-current-users-de-through-cli-within-ssh-or-cron
+
+- name: Get XDG_CURRENT_DESKTOP
+  ansible.builtin.script: get_desktop.sh
+  register: XDG_CURRENT_DESKTOP
+  failed_when: false
+  no_log: true
+
+- debug:
+    msg: "{{ XDG_CURRENT_DESKTOP.stdout }} {{ gnome_xdg }}"
