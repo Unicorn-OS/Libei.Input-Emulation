@@ -1,3 +1,4 @@
 dependencies:
-  - LibEI/build
+  - LibEI/build deps
+  # - LibEI/build
   - LibEI/test

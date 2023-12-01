@@ -1,0 +1,23 @@
+---
+- name: Dependency for community.general.dconf
+  ansible.builtin.dnf:
+    name:
+    - git
+    - diffutils
+    - gcc
+    - gcc-c++
+    - pkgconf-pkg-config
+    - systemd-devel
+    - libxkbcommon-devel
+    - libxml2
+    - doxygen
+    - python3-attrs
+    - python3-pytest
+    - python3-dbusmock
+    - python3-jinja2
+    - python3-pip
+    - python3-pyyaml
+    - hugo
+    - libabigail
+    state: latest
+  become: true

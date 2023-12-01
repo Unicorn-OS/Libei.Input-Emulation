@@ -3,6 +3,6 @@
     ansible_become_password: u
 
   roles:
-  - Env
+  # - Env
   # - Meson
-  # - LibEI
+  - LibEI
