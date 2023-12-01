@@ -11,5 +11,3 @@ by: Phoronix
 found via: https://www.google.com/search?q=wayland+weston+emulate+input
 
 ## architecture:
-mailing list:
-- https://lists.freedesktop.org/archives/wayland-devel/2020-July/041556.html
