@@ -9,3 +9,15 @@ start_server(){
 start_client(){
   screen -S client -d -m ./ei-demo-client
 }
+
+list(){
+  screen -l
+}
+
+connect(){
+  screen -r server
+}
+
+start_server
+start_client
+list
