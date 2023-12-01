@@ -1,0 +1,5 @@
+- name: Git clone
+  ansible.builtin.git:
+    repo: "{{ git_url }}"
+    dest: "{{ ansible_env.HOME }}/.uni/ai/libei"
+    update: no

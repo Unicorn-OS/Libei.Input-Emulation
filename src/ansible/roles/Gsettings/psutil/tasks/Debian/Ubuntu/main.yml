@@ -1,6 +1,0 @@
----
-- name: Install python3-psutil
-  ansible.builtin.apt:
-    pkg:
-    - python3-psutil
-  become: true

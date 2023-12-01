@@ -1,0 +1,7 @@
+---
+- name: Dependency for community.general.dconf
+  ansible.builtin.apt:
+    pkg:
+    - python3-psutil
+    - dconf-editor
+  become: true

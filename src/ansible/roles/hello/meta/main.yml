@@ -1,4 +1,0 @@
-dependencies:
-- .dep/psutil
-- App/install
-- App/init

@@ -1,0 +1,5 @@
+dependencies:
+- Env/Gsettings/psutil
+- Env/Click Policy/single
+- Env/Focus/follow mouse
+- Env/Power/always on

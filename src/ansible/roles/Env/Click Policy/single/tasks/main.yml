@@ -1,0 +1,6 @@
+---
+- name: Click-Policy Single
+  community.general.dconf:
+    key: "/org/gnome/nautilus/preferences/click-policy"
+    value: "'single'"
+    state: present

@@ -1,0 +1,13 @@
+- name: Get setting
+  community.general.dconf:
+    key: "{{ item.path }}"
+    state: read
+  register: state
+  loop: "{{ setting }}"
+
+- debug:
+    msg: "Setting {{ setting.path | basename }} = {{ state }}"
+
+- name: To Do!
+  debug:
+    msg: "State {{ state }}"

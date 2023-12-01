@@ -1,0 +1,6 @@
+- name: Set settings to Default
+  community.general.dconf:
+    key: "{{ item.path }}"
+    value: "{{ item.default }}"
+    state: present
+  loop: "{{setting}}"
