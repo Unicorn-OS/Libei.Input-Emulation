@@ -2,6 +2,7 @@
 # Home
 ## [Doc:](https://gitlab.freedesktop.org/libinput/libei#documentation)
 https://libinput.pages.freedesktop.org/libei/
+- https://libinput.pages.freedesktop.org/libei/libraries/
 
 ## source:
 - https://gitlab.freedesktop.org/libinput/libei
