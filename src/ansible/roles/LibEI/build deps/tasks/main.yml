@@ -21,3 +21,33 @@
     - libabigail
     state: latest
   become: true
+
+- name: Install multi python packages with version specifiers
+  ansible.builtin.pip:
+    name:
+      - meson
+      - ninja
+      - structlog
+      - strenum
+
+# Manual fixes
+- name: (add manually) other Dependencies pkg
+  ansible.builtin.dnf:
+    name:
+    - cmake
+    - valgrind
+    - libevdev
+    - libevdev-devel
+    - python-black
+    state: latest
+  become: true
+
+- name: (add manually) other Dependencies pip
+  ansible.builtin.pip:
+    name:
+      - pytest-xdist
+      - ruff
+
+# Missing: epoll-shim
+# This may be BSD specific?
+#https://github.com/jiixyj/epoll-shim
