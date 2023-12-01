@@ -1,6 +1,6 @@
 # Libei.Input-Emulation
 # Home
-## Doc:
+## [Doc:](https://gitlab.freedesktop.org/libinput/libei#documentation)
 https://libinput.pages.freedesktop.org/libei/
 
 ## source:
