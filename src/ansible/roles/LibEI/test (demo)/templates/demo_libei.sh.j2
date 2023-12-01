@@ -11,13 +11,14 @@ start_client(){
 }
 
 list(){
-  screen -l
+  screen -list
 }
 
-connect(){
+attach_to_server(){
   screen -r server
 }
 
 start_server
 start_client
 list
+attach_to_server
