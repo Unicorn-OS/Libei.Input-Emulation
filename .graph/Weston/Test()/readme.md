@@ -5,7 +5,3 @@
 >With that xdotool can move the pointer. Note this is truly the most minimal code just to illustrate the point but you can fill in the blanks and do things like the compositor preventing XTEST or not, etc.
 
 # source:
-
-commit:
-- https://gitlab.freedesktop.org/whot/weston/-/commits/wip/eis
-- https://gitlab.freedesktop.org/whot/xserver/-/commits/wip/xwayland-eis
