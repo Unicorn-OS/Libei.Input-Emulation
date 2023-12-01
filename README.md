@@ -1,8 +1,12 @@
 # Libei.Input-Emulation
-## Home
-src: https://gitlab.freedesktop.org/whot/libei/
+# Home
+## source:
+- https://gitlab.freedesktop.org/libinput/libei
 
-## article:
+alt:
+- https://gitlab.freedesktop.org/whot/libei/
+
+# article:
 by: Phoronix
 1. https://www.phoronix.com/news/LIBEI-Emulated-Input-Wayland
 2. https://www.phoronix.com/news/libei-1.0-RC
